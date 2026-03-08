@@ -8,50 +8,59 @@
     <meta name="theme-color" content="#DB2777">
     <title>Para Minha Mulher: Lara ❤️</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 </head>
 
 <body>
 
-    <main class="card">
+    <article class="card">
 
         <!-- Progress -->
-        <div class="progress-container">
+        <header class="progress-container" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-container">
             <div class="progress-bar" id="progress-bar"></div>
-        </div>
+        </header>
 
         <!-- Quiz -->
-        <section class="quiz-section" id="quiz-section">
-            <div class="icon-box" id="icon">✨</div>
-            <h1 class="question-text" id="question-text">Oi moi! Preparei algo simples, aceita começar?</h1>
+        <section class="quiz-section" id="quiz-section" aria-live="polite">
+            <div class="icon-box" id="icon" aria-hidden="true">✨</div>
+            <img src="" id="memory-image" class="memory-image hidden" alt="Lembrança" />
+            <h1 class="question-text" id="question-text">Oi moi! Preparei algo especial pra hoje, aceita começar?</h1>
 
-            <div class="btn-group">
-                <button class="btn btn-no" id="btn-nao">Não</button>
-                <button class="btn btn-yes" id="btn-sim">Sim ❤️</button>
-            </div>
+            <nav class="btn-group" aria-label="Opções de resposta">
+                <button class="btn btn-no" id="btn-nao" aria-label="Recusar">Não</button>
+                <button class="btn btn-yes" id="btn-sim" aria-label="Aceitar">Sim ❤️</button>
+            </nav>
         </section>
 
         <!-- Final -->
-        <section class="final-section" id="final-section">
-            <div class="icon-box">👑</div>
-            <h1 class="final-title">Feliz Dia da Mulher, Lara!</h1>
+        <section class="final-section" id="final-section" aria-hidden="true">
+            <div class="icon-box final-icon" aria-hidden="true">👑</div>
+            <h1 class="final-title">Feliz Dia da Mulher!</h1>
 
             <div class="final-text">
-                Oi Dóca, desde o dia <b>14/02/2022</b> você mudou minha vida de um jeito que nem sei explicar.<br><br>
+                <p>Oi Dóca, desde o dia <b>14/02/2022</b> você mudou minha vida de um jeito que eu não conseguiria medir em palavras.</p>
 
-                Você é a mulher mais forte, difícil e incrível que eu conheço.<br><br>
+                <p>Você é simplesmente incrível por ser exatamente quem é. Admiro demais a sua força, sua garra para nunca abaixar a cabeça e como ilumina qualquer ambiente com o seu jeito de ser. Lutar contra tudo e todos ao seu lado foi e sempre será a melhor escolha que já fiz.</p>
 
-                Seja aqui ou morando fora do Brasil, vou estar sempre do seu lado pra ver você virar a profissional de
-                sucesso que nasceu pra ser.<br><br>
+                <p>Seja aqui ou morando fora do Brasil, estarei sempre na primeira fila para te aplaudir e ver a mulher maravilhosa que você se torna a cada dia.</p>
 
-                <b>Te amo infinitamente.</b>
+                <p class="love-declaration"><b>Te amo infinitamente.</b></p>
 
-                <p class="final-signature">Com amor, Edu</p>
+                <span class="final-signature">Com amor, Edu</span>
             </div>
         </section>
 
-    </main>
+    </article>
+
+    <!-- Áudio Invisível que tocará a partir do primeiro clique -->
+    <audio id="bg-music" src="assets/the_night_we_met.mp3" loop></audio>
 
     <script src="js/app.js"></script>
 
